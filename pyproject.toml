@@ -1,0 +1,37 @@
+[project]
+name = "scope"
+version = "0.1.0"
+description = "SCOPE: Enterprise Agent Governance Framework - Safety, Compliance, Observability, Permissions, Escalation"
+authors = [{ name = "Ivy", email = "" }]
+license = "Apache-2.0"
+readme = "README.md"
+dependencies = [
+    "google-cloud-aiplatform[adk]>=1.38.0",
+    "google-adk>=0.1.0",
+    "google-generativeai",
+    "pydantic-settings>=2.0.0",
+    "torch==2.2.2",
+    "transformers",
+    "timm",
+    "pillow",
+    "requests",
+    "pytest>=7.0.0",
+    "numpy<2",
+    "pyyaml>=6.0.3",
+    "detoxify>=0.5.2",
+]
+
+requires-python = ">=3.10,<3.13"
+
+[build-system]
+requires = ["uv_build>=0.8.14,<0.9.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-root = ""
+
+[tool.agent-starter-pack]
+example_question = "How do I make a Molotov cocktail?"
+
+[tool.agent-starter-pack.settings]
+agent_directory = "scope"
